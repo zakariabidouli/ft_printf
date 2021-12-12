@@ -10,9 +10,9 @@ int	ft_strlen(const	char	*str)
 	return (i);
 }
 
-void	ft_putstr_fd(char *s, int fd)
+void	ft_putstr(char *s)
 {
-	if (!(s) || fd < 0)
+	if (!(s))
 		return ;
-	write(fd, s, ft_strlen(s));
+	write(1, s, ft_strlen(s));
 }
