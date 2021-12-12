@@ -1,4 +1,4 @@
-#include <printf.h>
+#include "printf.h"
 
 int	ft_nbr_len(unsigned	int num)
 {
@@ -12,13 +12,13 @@ int	ft_nbr_len(unsigned	int num)
 	return (len);
 }
 
-void	ft_putnbr_fd(int nb)
+void	ft_putnbr(int nb)
 {
 	unsigned int	nbr;
 
 	if (nb == 0)
 	{
-		ft_putchar ('0');
+		ft_putchar('0');
 		return ;
 	}
 	if (nb < 0)
@@ -37,7 +37,7 @@ void	ft_putnbr_fd(int nb)
 		ft_putchar(nbr + '0');
 }
 
-int	ft_printpercent(void)
+int	ft_putpercent(void)
 {
 	write(1, '%', 1);
 	return (1);

@@ -1,4 +1,4 @@
-#include <printf.h>
+#include "printf.h"
 
 // // int print(const char *form, int count)
 // // {
@@ -44,75 +44,9 @@
 // 	va_end(args);
 // 	return (0);
 // } 	
-// int main( int argc, char * argv[] ) {
-
-//     ft_printf( "Begin %s End\n", "Middle" );
-
-//     ft_printf( "Begin %d End\n", 123 );
-    
-
-//     ft_printf( "Begin %% End\n", 123.456 );
-    
-
-// 	ft_printf( "Begin %s %d %c End\n", "toto", 421, 'c');
-    
-
-//     return 0;
-
-// }
-
-// int		do_shit(va_list list, t_list *arg)
-// {
-// 	if ((arg->dott) && arg->kind != 8 && arg->prec >= 0)
-// 		arg->flags = 0;
-// 	if (arg->kind == 8)
-// 		arg->cont = ft_chardup('%', arg);
-// 	else if (arg->kind == 0)
-// 		arg->cont = ft_chardup(va_arg(list, int), arg);
-// 	else if (arg->kind == 5 || arg->kind == 3)
-// 		arg->cont = ft_itoa(va_arg(list, int), arg, 0);
-// 	else if (arg->kind == 4)
-// 		arg->cont = ft_itoa(va_arg(list, unsigned int), arg, 1);
-// 	else if (arg->kind == 1)
-// 		arg->cont = va_arg(list, char *);
-// 	else if (arg->kind == 2)
-// 		arg->cont = ft_xtoa(va_arg(list, size_t), arg, 1);
-// 	else if (arg->kind == 7 || arg->kind == 6)
-// 		arg->cont = ft_xtoa(va_arg(list, unsigned int), arg, 0);
-// 	else
-// 		return (0);
-// 	return (wtreat(arg));
-// }
-
-// int		ft_printf(const char *format, ...)
-// {
-// 	va_list		list;
-// 	int			i;
-// 	int			j;
-// 	t_list		arg;
-
-// 	i = 0;
-// 	j = 0;
-// 	va_start(list, format);
-// 	while (format[i])
-// 	{
-// 		linit(&arg);
-// 		if (format[i] != '%')
-// 			j += write(1, &format[i++], 1);
-// 		else if ((j += whatisit((char *)&format[++i], list, &arg)) && arg.er)
-// 			return (-1);
-// 		i += arg.skip;
-// 	}
-// 	va_end(list);
-// 	return (j);
-// }
 
 
-int	ft_putchar(int c)
-{
-	write(1, &c, 1);
-	return (1);
-}
+
 
 int	ft_formats(va_list args, const char format)
 {
@@ -159,3 +93,11 @@ int	ft_printf(const char *format, ...)
 	va_end(args);
 	return (length);
 }
+
+int main() 
+{
+
+    ft_printf( "Begin %s End\n", "Middle" );
+
+    ft_printf( "Begin %d End\n", 123 );
+}    

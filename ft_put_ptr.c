@@ -1,4 +1,4 @@
-#include <printf.h>
+#include "printf.h"
 
 // void	ft_putnbr_fd(int nb, int fd)
 // {
@@ -48,9 +48,9 @@ void	ft_ptr(unsigned long long num)
 	else
 	{
 		if (num <= 9)
-			ft_putchar_fd((num + '0'), 1);
+			ft_putchar(num + '0');
 		else
-			ft_putchar_fd((num - 10 + 'a'), 1);
+			ft_putchar(num - 10 + 'a');
 	}
 }
 

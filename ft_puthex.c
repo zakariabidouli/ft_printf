@@ -1,4 +1,4 @@
-#include <printf.h>
+#include "printf.h"
 
 int	ft_hex_len(unsigned	int num)
 {
@@ -23,13 +23,13 @@ void	ft_hex(unsigned int num, const char format)
 	else
 	{
 		if (num <= 9)
-			ft_putchar_fd((num + '0'), 1);
+			ft_putchar(num + '0');
 		else
 		{
 			if (format == 'x')
-				ft_putchar_fd((num - 10 + 'a'), 1);
+				ft_putchar(num - 10 + 'a');
 			if (format == 'X')
-				ft_putchar_fd((num - 10 + 'A'), 1);
+				ft_putchar(num - 10 + 'A');
 		}
 	}
 }
