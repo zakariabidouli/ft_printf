@@ -15,11 +15,11 @@ OBJS = $(SRC:%.c=%.o)
 	
 all: $(NAME)
 
-$(NAME): $(OBJS)
-	ar -rc $(NAME) $(OBJS) 
-
 $(OBJS): $(SRC)
 	 $(CC) $(FLAGS) -c $(SRC) 
+
+$(NAME): $(OBJS)
+	ar -rc $(NAME) $(OBJS) 
 
 clean:
 	rm -rf $(OBJS)
