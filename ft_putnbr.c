@@ -1,4 +1,4 @@
-#include "printf.h"
+#include "libftprintf.h"
 
 int	ft_nbr_len(unsigned	int num)
 {
@@ -39,6 +39,6 @@ void	ft_putnbr(int nb)
 
 int	ft_putpercent(void)
 {
-	write(1, '%', 1);
+	write(1, "%", 1);
 	return (1);
 }
