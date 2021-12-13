@@ -1,6 +1,6 @@
-#include "libftprintf.h"
+#include "ft_printf.h"
 
-static int	ft_strlen(const	char	*str)
+int	ft_strlen(const	char	*str)
 {
 	int	i;
 

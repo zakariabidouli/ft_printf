@@ -1,6 +1,6 @@
 .PHONY: all clean fclean re
 
-NAME 	= libftprintf.a
+NAME 	= ft_printf.a
 
 CC 		= gcc
 
