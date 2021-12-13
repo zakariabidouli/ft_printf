@@ -1,6 +1,6 @@
 #include "libftprintf.h"
 
-int	ft_strlen(const	char	*str)
+static int	ft_strlen(const	char	*str)
 {
 	int	i;
 
@@ -10,9 +10,10 @@ int	ft_strlen(const	char	*str)
 	return (i);
 }
 
-void	ft_putstr(char *s)
+int	ft_putstr(char *s)
 {
 	if (!(s))
-		return ;
+		return (0);
 	write(1, s, ft_strlen(s));
+	return (ft_strlen(s));
 }

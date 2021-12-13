@@ -25,7 +25,7 @@
 // 		ft_putchar_fd (nbr + '0', fd);
 // }
 
-int	ft_ptr_len(unsigned long long num)
+static int	ft_ptr_len(unsigned long long num)
 {
 	int	len;
 
@@ -38,8 +38,10 @@ int	ft_ptr_len(unsigned long long num)
 	return (len);
 }
 
-void	ft_ptr(unsigned long long num)
+int	ft_ptr(unsigned long long num)
 {
+	int	len;
+
 	if (num >= 16)
 	{
 		ft_ptr(num / 16);
@@ -52,6 +54,8 @@ void	ft_ptr(unsigned long long num)
 		else
 			ft_putchar(num - 10 + 'a');
 	}
+	len = ft_ptr_len(num);
+	return (len);
 }
 
 int	ft_put_ptr(unsigned long long ptr)
