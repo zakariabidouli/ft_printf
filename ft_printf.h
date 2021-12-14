@@ -12,5 +12,6 @@ int		ft_putstr(char *s);
 int		ft_put_hex(unsigned int num, const char format);
 int		ft_putpercent(void);
 int		ft_put_ptr(unsigned long long ptr);
+int		ft_put_unsigned(unsigned int nb);
 
 #endif

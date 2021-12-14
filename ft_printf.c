@@ -15,8 +15,8 @@ int	ft_formats(va_list args, const char format)
 		length += ft_put_ptr(va_arg(args, unsigned long long));
 	else if (format == 'd' || format == 'i')
 		length += ft_putnbr(va_arg(args, int));
-	// else if (format == 'u')
-	// 	length += ft_put_unsigned(va_arg(args, unsigned int));
+	else if (format == 'u')
+		length += ft_put_unsigned(va_arg(args, unsigned int));
 	else if (format == 'x' || format == 'X')
 		length += ft_put_hex(va_arg(args, unsigned int), format);
 	else if (format == '%')
@@ -47,16 +47,16 @@ int	ft_printf(const char *format, ...)
 	va_end(args);
 	return (length);
 }
+// #include <stdio.h>
+// int main() 
+// {
+// 	// char *p;
+// 	printf(" %i \n", 0);
 
-int main() 
-{
-	char *p;
+//     ft_printf( " %i ", 0 );
 
-
-    ft_printf( "Begin %% End\n", p );
-
-    ft_printf( "Begin %d End\n", 123 );
-}    
+//     // ft_printf( "Begin %d End\n", 123 );
+// }    
 
 // // int print(const char *form, int count)
 // // {

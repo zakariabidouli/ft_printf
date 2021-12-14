@@ -1,8 +1,8 @@
 #include "ft_printf.h"
 
-static int	ft_nbr_len(int num)
+static int	ft_unsigned_len(unsigned int num)
 {
-	int	len;
+	unsigned int	len;
 
 	len = 0;
 	if(num < 0)
@@ -14,11 +14,12 @@ static int	ft_nbr_len(int num)
 	return (len);
 }
 
-int	ft_putnbr(int nb)
+int	ft_put_unsigned(unsigned int nb)
 {
 	unsigned int	nbr;
-	int	len;
-	len = ft_nbr_len(nb);
+	unsigned int	len;
+
+	len = ft_unsigned_len(nb);
 	if (nb == 0)
 	{
 		ft_putchar('0');
@@ -33,17 +34,11 @@ int	ft_putnbr(int nb)
 		nbr = nb;
 	if (nbr > 9)
 	{
-		ft_putnbr(nbr / 10);
-		ft_putnbr(nbr % 10);
+		ft_put_unsigned(nbr / 10);
+		ft_put_unsigned(nbr % 10);
 	}
 	else
 		ft_putchar(nbr + '0');
 	
 	return (len);
-}
-
-int	ft_putpercent(void)
-{
-	write(1, "%", 1);
-	return (1);
 }
