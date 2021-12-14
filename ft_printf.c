@@ -48,6 +48,16 @@ int	ft_printf(const char *format, ...)
 	return (length);
 }
 
+int main() 
+{
+	char *p;
+
+
+    ft_printf( "Begin %% End\n", p );
+
+    ft_printf( "Begin %d End\n", 123 );
+}    
+
 // // int print(const char *form, int count)
 // // {
 
@@ -93,11 +103,3 @@ int	ft_printf(const char *format, ...)
 // 	return (0);
 // } 	
 
-
-// int main() 
-// {
-
-//     ft_printf( "Begin %s End\n", "Middle" );
-
-//     ft_printf( "Begin %d End\n", 123 );
-// }    
