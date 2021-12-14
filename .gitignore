@@ -1,4 +1,7 @@
 *.o
 *.a
-.git
-*Tester
+*.out
+.vscode
+.DS*
+*test*
+*Test*

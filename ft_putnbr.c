@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: zbidouli <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/12/14 21:02:27 by zbidouli          #+#    #+#             */
+/*   Updated: 2021/12/14 21:02:29 by zbidouli         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
 
 static int	ft_nbr_len(int num)
@@ -5,7 +17,7 @@ static int	ft_nbr_len(int num)
 	int	len;
 
 	len = 0;
-	if(num < 0)
+	if (num < 0)
 		len++;
 	while (num != 0 && ++len)
 	{
@@ -17,7 +29,8 @@ static int	ft_nbr_len(int num)
 int	ft_putnbr(int nb)
 {
 	unsigned int	nbr;
-	int	len;
+	int				len;
+
 	len = ft_nbr_len(nb);
 	if (nb == 0)
 	{
@@ -38,7 +51,6 @@ int	ft_putnbr(int nb)
 	}
 	else
 		ft_putchar(nbr + '0');
-	
 	return (len);
 }
 

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_puthex.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: zbidouli <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/12/14 21:02:18 by zbidouli          #+#    #+#             */
+/*   Updated: 2021/12/14 21:02:21 by zbidouli         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
 
 static int	ft_hex_len(unsigned	int num)
@@ -36,7 +48,6 @@ int	ft_hex(unsigned int num, const char format)
 	}
 	len = ft_hex_len(num);
 	return (len);
-
 }
 
 int	ft_put_hex(unsigned int num, const char format)

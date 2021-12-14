@@ -1,6 +1,16 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: zbidouli <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/12/14 21:01:23 by zbidouli          #+#    #+#             */
+/*   Updated: 2021/12/14 21:01:30 by zbidouli         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
-
-
 
 int	ft_formats(va_list args, const char format)
 {
@@ -47,59 +57,3 @@ int	ft_printf(const char *format, ...)
 	va_end(args);
 	return (length);
 }
-// #include <stdio.h>
-// int main() 
-// {
-// 	// char *p;
-// 	printf(" %i \n", 0);
-
-//     ft_printf( " %i ", 0 );
-
-//     // ft_printf( "Begin %d End\n", 123 );
-// }    
-
-// // int print(const char *form, int count)
-// // {
-
-// // }
-
-// int	ft_printf(const char *format, ...)
-// {
-// 	va_list	args;
-// 	int i;
-
-// 	i = 0; 
-// 	va_start(args, format);
-//     while (format[i])
-//     {
-// 		if( (65 <= format[i] && 90 >= format[i]) || (97 <= format[i] && 122 >= format[i]) || format[i] == '%' )   
-// 		{          
-//         	ft_putchar_fd('format[i]');
-//         	break;
-// 		}	
-//         else if (*format == 's')             
-//         { 
-// 		    ft_putstr_fd(va_arg(args, int), 1);
-//             break;
-// 		}	
-//         else if (*format  == 'd')          
-//         { 
-// 		    ft_putnbr_fd(va_arg(args, int), 1);
-//             break;
-// 		}	
-//         else if (*format  == 'c')          
-//         {
-// 		    ft_putchar_fd((char) va_arg(args, int), 1);
-// 		    break;
-// 		}
-// 		// else if (*format  == 'X')          
-//         // {
-// 		// 	ft_puthex(va_arg(args, int));
-//         // 	break;
-// 		// }
-// 		format++;	
-//         }
-// 	va_end(args);
-// 	return (0);
-// } 	
-

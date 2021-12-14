@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_put_unsigned.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: zbidouli <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/12/14 21:02:00 by zbidouli          #+#    #+#             */
+/*   Updated: 2021/12/14 21:02:02 by zbidouli         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
 
 static int	ft_unsigned_len(unsigned int num)
@@ -5,7 +17,7 @@ static int	ft_unsigned_len(unsigned int num)
 	unsigned int	len;
 
 	len = 0;
-	if(num < 0)
+	if (num < 0)
 		len++;
 	while (num != 0 && ++len)
 	{
@@ -39,6 +51,5 @@ int	ft_put_unsigned(unsigned int nb)
 	}
 	else
 		ft_putchar(nbr + '0');
-	
 	return (len);
 }
