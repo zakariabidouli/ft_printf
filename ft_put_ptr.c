@@ -25,7 +25,7 @@ static int	ft_ptr_len(unsigned long long num)
 	return (len);
 }
 
-int	ft_ptr(unsigned long long num)
+void	ft_ptr(unsigned long long num)
 {
 	int	len;
 
@@ -42,7 +42,6 @@ int	ft_ptr(unsigned long long num)
 			ft_putchar(num - 10 + 'a');
 	}
 	len = ft_ptr_len(num);
-	return (len);
 }
 
 int	ft_put_ptr(unsigned long long ptr)

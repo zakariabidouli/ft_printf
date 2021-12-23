@@ -17,7 +17,7 @@ static int	ft_unsigned_len(unsigned int num)
 	unsigned int	len;
 
 	len = 0;
-	if (num < 0)
+	if (num == 0)
 		len++;
 	while (num != 0 && ++len)
 	{
@@ -28,7 +28,6 @@ static int	ft_unsigned_len(unsigned int num)
 
 int	ft_put_unsigned(unsigned int nb)
 {
-	unsigned int	nbr;
 	unsigned int	len;
 
 	len = ft_unsigned_len(nb);
@@ -37,19 +36,12 @@ int	ft_put_unsigned(unsigned int nb)
 		ft_putchar('0');
 		return (1);
 	}
-	if (nb < 0)
+	if (nb > 9)
 	{
-		ft_putchar('-');
-		nbr = nb * -1;
+		ft_put_unsigned(nb / 10);
+		ft_put_unsigned(nb % 10);
 	}
 	else
-		nbr = nb;
-	if (nbr > 9)
-	{
-		ft_put_unsigned(nbr / 10);
-		ft_put_unsigned(nbr % 10);
-	}
-	else
-		ft_putchar(nbr + '0');
+		ft_putchar(nb + '0');
 	return (len);
 }

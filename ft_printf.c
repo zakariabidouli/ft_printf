@@ -36,8 +36,8 @@ int	ft_formats(va_list args, const char format)
 
 int	ft_printf(const char *format, ...)
 {
-	int		i;
 	va_list	args;
+	int		i;
 	int		length;
 
 	i = 0;
