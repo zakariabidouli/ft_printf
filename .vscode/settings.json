@@ -1,6 +1,9 @@
 {
 	"C_Cpp.dimInactiveRegions": false,
 	"files.associations": {
-		"ft_printf.h": "c"
+		"ft_printf.h": "c",
+		"cstdarg": "c",
+		"cstdio": "c",
+		"cwchar": "c"
 	}
 }

@@ -57,3 +57,10 @@ int	ft_printf(const char *format, ...)
 	va_end(args);
 	return (length);
 }
+
+
+// int main()
+// {
+// 	printf("%", jehfljkejfk);
+// 	return 0;
+// }
